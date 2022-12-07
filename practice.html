@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first
+        {
+            display: grid;
+            width:600px;
+            height: 100vh;
+            grid-template-columns:200px 200px 200px;
+            grid-template-rows:100px 100px ;
+            row-gap:20px;
+            column-gap:10px;
+            /* align-items:center */
+            /* justify-items: center; */
+            /* grid-template-areas:"child1 child1 child1"
+                                "child2 child3 child4" */
+            grid-template-areas:"child1 . ."
+                                "child2 child3 child4"
+
+        }
+        #first>div:nth-child(odd){
+         background: aqua;
+        }
+        #first>div:nth-child(even){
+         background: yellowgreen;
+        }
+        .child1
+        {
+            /* grid-column-start: 1;
+            grid-column-end:3 */
+            /* grid-column:1/4 */
+            grid-area:child1;
+        }
+        /* .child2
+        {
+            grid-column-start: 1;
+            grid-column-end:3
+            grid-column:1/4
+        } */
+
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div class="child1">child1 </div>
+        <div class="child2">child2</div>
+        <div class="child3">child3</div>
+        <div class="child4">child4</div>
+        <!-- <div class="child5">child5</div> -->
+        
+    </div>
+</body>
+</html>
